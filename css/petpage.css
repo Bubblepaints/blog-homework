@@ -1,0 +1,53 @@
+.citation {
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+  padding: 15px;
+  background: #efefef;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.citation::before {
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  color: #444;
+  top: -25px;
+  left: -25px;
+}
+
+.citation::after {
+  content: "\201D";
+  font-size: 80px;
+  position: absolute;
+  color: #444;
+  bottom: -60px;
+  right: -25px;
+}
+
+.new-art {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.new-art__image-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 10px;
+}
+
+.new-art__image {
+  position: relative;
+  top: -55px;
+  left: -35px;
+}
+
+@media (min-width: 600px) {
+  .new-art {
+    flex-wrap: nowrap;
+  }
+}

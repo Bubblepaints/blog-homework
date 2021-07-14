@@ -1,0 +1,109 @@
+.pet-image {
+  width: 100px;
+}
+
+.card-container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.card {
+  border: 3px solid #000;
+  border-radius: 5px;
+  max-width: 300px;
+}
+
+.card.pink {
+  border-color: #e486cd;
+}
+
+.card.pink:hover {
+  background: RGBA(228, 134, 205, 0.1);
+}
+
+.card.gold {
+  border-color: #c1800f;
+}
+
+.card.gold:hover {
+  background: RGBA(193, 128, 15, 0.1);
+}
+
+.card.gray {
+  border-color: #7b9aa4;
+}
+
+.card.gray:hover {
+  background: RGBA(123, 154, 164, 0.1);
+}
+
+.card.purple {
+  border-color: #aa61aa;
+}
+
+.card.purple:hover {
+  background: RGBA(170, 97, 170, 0.1);
+}
+
+.card-link {
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-contents {
+  display: grid;
+  grid-row-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.card-details {
+  order: 3;
+}
+
+.card-details__group {
+  display: block;
+}
+
+.pet-name {
+  margin: 0;
+  font-family: "coolvetica";
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+}
+
+.pet-name::before {
+  content: "";
+  background: #fed123;
+  position: absolute;
+  z-index: -1;
+  height: 60%;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+}
+
+@media (min-width: 660px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 850px) {
+  .card-contents {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .card {
+    max-width: none;
+  }
+
+  .card-image {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+}
